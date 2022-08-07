@@ -1,0 +1,15 @@
+{
+  "name": "@npm-copy-test/app",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "copy": "node ../../node_modules/npm/bin/npm-cli.js copy .deploy"
+  },
+  "dependencies": {
+    "got": "^11.8.5",
+    "@npm-copy-test/shared": "^1.0.0"
+  },
+  "devDependencies": {
+    "npm": "everett1992/cli#copy"
+  }
+}
