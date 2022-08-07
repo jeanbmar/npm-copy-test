@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "copy": "node ../../node_modules/npm/bin/npm-cli.js copy .deploy"
+    "copy": "npx npm copy .deploy"
   },
   "dependencies": {
     "got": "^11.8.5",
