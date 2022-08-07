@@ -9,5 +9,5 @@ This repo demonstrates how to use the [npm copy](https://github.com/npm/cli/pull
 npm install
 cp packages/app
 npm run copy # this wraps the npm copy from the dev branch since it's not available on npm yet
-# files are bundled to packages/app/.deploy/app directory
+# files are bundled to packages/app/.deploy directory
 ```
