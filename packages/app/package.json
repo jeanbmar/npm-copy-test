@@ -2,9 +2,6 @@
   "name": "@npm-copy-test/app",
   "private": true,
   "version": "1.0.0",
-  "scripts": {
-    "copy": "npx npm copy .deploy"
-  },
   "dependencies": {
     "got": "^11.8.5",
     "@npm-copy-test/shared": "^1.0.0"

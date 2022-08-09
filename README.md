@@ -8,7 +8,7 @@ This repo demonstrates how to use the [npm copy](https://github.com/npm/cli/pull
 # pull the repo, then:
 npm install
 cd packages/app
-npm run copy # this wraps the npm copy from the dev branch since it's not available on npm yet
+npx npm copy .deploy # runs local npm
 # files are bundled to packages/app/.deploy directory
 ```
 
@@ -23,11 +23,7 @@ npm run copy # this wraps the npm copy from the dev branch since it's not availa
 }
 ```
 
-2. Use npx to run the copy command:
-```json
-{
-  "scripts": {
-    "copy": "npx npm copy .deploy"
-  },
-}
+2. Use npx to run the copy command from within the project:
+```bash
+npx npm copy .deploy
 ```
