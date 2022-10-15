@@ -23,7 +23,7 @@ jobs:
         run: |
           mkdir -p /opt/npm
           cd /opt/npm
-          npm install jeanbmar/cli#copy
+          npm install everett1992/cli#copy
       - name: bundle dependencies
         run: |
           npm ci --workspace=packages/app
