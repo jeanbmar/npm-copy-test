@@ -1,0 +1,30 @@
+name: test
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: using node ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install build tools
+        run: |
+          mkdir -p /opt/npm
+          cd /opt/npm
+          npm install jeanbmar/cli#copy
+      - name: bundle dependencies
+        run: |
+          npm ci --workspace=packages/app
+          /opt/npm/node_modules/npm/bin/npm-cli.js copy /opt/app --omit=dev --omit=optional --loglevel=verbose
